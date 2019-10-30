@@ -1,7 +1,10 @@
+
 body, html{
   height:100%;
 }
 body{
+  background-image: url("https://wallpapercave.com/wp/wp1822792.jpg");
+  background-size: cover;
   margin: 0px;
   background-color:#444;
   font-size: 18px;
@@ -21,7 +24,53 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+
+  /* border:10px solid red; */
+  /* animation: rotation 2s infinite linear; */
+  border-radius:100px;
   position:absolute;
+  /* -webkit-animation-name: spin;
+  -webkit-animation-duration: infinite; */
+}
+@keyframes rotation {
+  from {
+  transform: rotate(0deg);
+  left:0px;
+  } to {
+    transform: rotate(359deg);
+    left: 1500px;
+  }
+}
+
+/* @-webkit-keyframes mymove {
+  from {left:0px;}
+  to {left: 200px;}
+} */
+
+@keyframes mymove {
+  from {left:100%;}
+  to {left: 0;}
+}
+
+.morty {
+
+  /* border-radius:10px; */
+  /* -webkit-animation: mymove 5s infinite; */
+  /* animation: mymove 5s linear 0s infinite alternate; */
+  animation: rotation 4s infinite linear;
+  position:absolute;
+}
+
+
+
+.rick {
+  position: absolute;
+  /* -webkit-animation: anim .75s infinite linear; */
+  animation: anim .75s infinite linear;
+}
+
+
+@keyframes anim {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(360deg);}
 }
